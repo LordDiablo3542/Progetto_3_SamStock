@@ -37,30 +37,32 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="4" name="Analisi" color="#000000" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true">
+        <task id="4" name="Analisi" color="#000000" meeting="false" start="2018-03-16" duration="8" complete="0" expand="true">
             <task id="52" name="Analisi requisiti" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="74" name="Analisi dei costi" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="77" name="Analisi di dominio" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="105" name="Analisi dei mezzi" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
+            <task id="697" name="Domande docenti" meeting="false" start="2018-03-23" duration="1" complete="0" expand="true"/>
             <task id="115" name="Consegna analisi" color="#8cb6ce" meeting="true" start="2018-03-16" duration="0" complete="0" expand="true"/>
         </task>
         <task id="2" name="Progettazione" color="#000000" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
             <task id="87" name="Gantt preventivo" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="471" name="Gantt consultivo" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true"/>
+            <task id="710" name="Documentazione su lettura codice a barre" meeting="false" start="2018-04-27" duration="1" complete="0" expand="true"/>
         </task>
         <task id="3" name="Implementazione" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
             <task id="101" name="Implementazione pdf" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
-            <task id="121" name="Implementazione codice a barre" meeting="false" start="2018-04-13" duration="8" complete="0" expand="true"/>
-            <task id="123" name="Implementazione lego" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
-            <task id="119" name="Implementazione video" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
-            <task id="124" name="Lettura codice a barre" color="#8cb6ce" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
+            <task id="121" name="Implementazione codice a barre" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
+            <task id="123" name="Implementazione lego" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
+            <task id="119" name="Implementazione video" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
+            <task id="124" name="Lettura codice a barre" color="#8cb6ce" meeting="false" start="2018-04-27" duration="22" complete="0" priority="3" expand="true"/>
         </task>
         <task id="5" name="Test del programma" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
             <task id="569" name="Test implementazione pdf" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
-            <task id="571" name="Test implementazione codice a barre" meeting="false" start="2018-04-13" duration="8" complete="0" expand="true"/>
-            <task id="573" name="Test implementazione lego" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
-            <task id="575" name="Test implementazione video" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
-            <task id="577" name="Test lettura codice a barre" color="#8cb6ce" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
+            <task id="571" name="Test implementazione codice a barre" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
+            <task id="573" name="Test implementazione lego" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
+            <task id="575" name="Test implementazione video" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
+            <task id="577" name="Test Lettura codice a barre" color="#8cb6ce" meeting="false" start="2018-04-27" duration="22" complete="0" priority="3" expand="true"/>
         </task>
         <task id="6" name="Documentazione" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
             <task id="92" name="Documentazione" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
