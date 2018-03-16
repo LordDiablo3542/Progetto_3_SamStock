@@ -50,7 +50,7 @@
             <task id="471" name="Gantt consultivo" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true"/>
             <task id="710" name="Documentazione su lettura codice a barre" meeting="false" start="2018-04-27" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="3" name="Implementazione" meeting="false" start="2018-03-23" duration="55" complete="0" expand="false">
+        <task id="3" name="Implementazione" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
             <task id="101" name="Implementazione pdf" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
             <task id="121" name="Implementazione codice a barre" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
             <task id="123" name="Implementazione lego" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
