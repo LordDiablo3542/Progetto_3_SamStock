@@ -1,0 +1,159 @@
+body {
+	padding-top: 100px;
+	padding-bottom: 80px;
+	background-color: #EEE;
+}
+
+.form-signin{
+    max-width: 330px;
+	padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin .form-signin-heading, .form-signin .checkbox{
+    margin-bottom: 10px;
+}
+
+.form-signin .checkbox{
+    font-weight: normal;
+}
+
+.form-signin .form-control{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+.form-signin .form-control:focus{
+    z-index: 2;
+}
+
+.form-signin input[type="text"]{
+    margin-bottom: -1px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"]{
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.account-wall{
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-transition: all .3s ease-in-out;
+		-moz-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+				-ms-transition: all .3s ease-in-out;
+					transition: all .3s ease-in-out;
+}
+.account-wall:hover{
+	-webkit-box-shadow: 0 0 15px rgba(16,150,255,.6);
+		-moz-box-shadow: 0 0 15px rgba(16,150,255,.6);
+			box-shadow: 0 0 15px rgba(16,150,255,.6);
+}
+
+.login-title{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+
+.profile-img{
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+		-webkit-border-radius: 50%;
+			border-radius: 50%;
+}
+
+.need-help{
+    margin-top: 10px;
+}
+
+.new-account{
+    display: block;
+    margin-top: 10px;
+}
+
+.back-link{
+	margin-left: 15px;
+}
+
+/*.modal{
+	padding: 75px auto;
+}*/
+
+.modal-dialog{
+	width: 500px;
+}
+
+.form-signup{
+	max-width: 450px;
+	padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signup input[type="text"]{
+	margin-bottom: -1px;
+	border-radius : 0;
+}
+
+.form-signup input[type="password"]{
+	margin-bottom: -1px;
+	border-radius : 0;
+}
+
+.form-signup input[name="cognome"]{
+	margin-bottom: 20px;
+}
+
+.form-signup input[name="passwordconf"]{
+	margin-bottom: 20px;
+}
+
+.form-signup input[name="email"]{
+	margin-bottom: 20px;
+}
+
+.alert{
+	margin-top: 20px;
+	max-width: 300px;
+}
+
+.help{
+	float: left;
+}
+
+.formAddProd > input{
+	margin-bottom: 10px;
+}
+
+.navbar-brand-logo{
+	height: 100%;
+}
+
+.sizedTD{
+	width: 50px;
+	text-align: center;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #FFCCCC;
+}
+
+.botMarg{
+	margin-bottom: 10px;
+}
