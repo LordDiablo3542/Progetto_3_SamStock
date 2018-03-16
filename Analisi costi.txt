@@ -1,0 +1,10 @@
+Giorni di lavoro	: 	8 giorni
+Ore al giorno		:	8 ore
+Paga l'ora a persona	:	50 fr.
+Ore totali		:	64 ore
+
+Paga Tot		:	3'200 fr. x2 persone
+Costi HW		:	0 fr.
+costi SW		: 	0 fr.
+
+Costi tot		:	6'400 fr.
