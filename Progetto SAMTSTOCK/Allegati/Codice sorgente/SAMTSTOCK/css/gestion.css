@@ -1,0 +1,35 @@
+body {
+	padding-top: 30px;
+	padding-bottom: 80px;
+	background-color: #FFF;
+}
+
+.back-link{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.alert{
+	margin-top: 20px;
+}
+
+.help{
+	float: left;
+}
+
+.formAddProd > input{
+	margin-bottom: 10px;
+}
+
+.navbar-brand-logo{
+	height: 100%;
+}
+
+.sizedTD{
+	width: 50px;
+	text-align: center;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #FFCCCC;
+}

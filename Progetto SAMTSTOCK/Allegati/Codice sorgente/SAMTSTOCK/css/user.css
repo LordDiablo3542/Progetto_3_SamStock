@@ -1,0 +1,50 @@
+body {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #FFF;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #d9f7ed;
+}
+
+.navbar-brand-logo{
+	height: 100%;
+}
+
+.actionLinks{
+	text-decoration: none;
+	cursor: pointer;
+}
+.actionLinks:link {
+    text-decoration: none;
+}
+.actionLinks:visited {
+    text-decoration: none;
+}
+.actionLinks:hover {
+    text-decoration: none;
+}
+.actionLinks:active {
+    text-decoration: none;
+}
+
+.sizedTD{
+	width: 50px;
+	text-align: center;
+}
+
+.sizedTDL{
+	word-spacing: 5px;
+	width: 100px;
+	text-align: center;
+}
+
+.searchForm{
+	margin: 20px -15px 20px -15px;
+}
+
+.searchInput{
+	border-radius : 0;
+}
+
