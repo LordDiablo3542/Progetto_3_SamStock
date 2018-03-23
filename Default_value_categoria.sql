@@ -1,0 +1,1 @@
+ALTER TABLE samtstock.prodotti CHANGE COLUMN Categoria Categoria INT(11) NULL DEFAULT 1 ;
