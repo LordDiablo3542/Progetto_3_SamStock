@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-03-12" view-index="0" gantt-divider-location="431" resource-divider-location="300" version="2.8.5" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-03-12" view-index="1" gantt-divider-location="431" resource-divider-location="300" version="2.8.5" locale="it">
     <description/>
     <view zooming-state="default:5" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="251" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="84" order="1"/>
-        <field id="tpd5" name="Data di fine" width="77" order="2"/>
-        <option id="taskLabelUp" value="length"/>
-        <option id="color.recent"><![CDATA[#000000 #ff3333 #99ff00 #ccffcc #f4f4f4]]></option>
+        <field id="tpd3" name="Nome" width="256" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="89" order="1"/>
+        <field id="tpd5" name="Data di fine" width="82" order="2"/>
+        <option id="color.recent"><![CDATA[#ffff00 #000000 #00ffcc #33cc00 #00cc00 #99ff00 #ff3333 #3333ff #ccffcc #f4f4f4]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nome" width="210" order="0"/>
@@ -37,38 +36,41 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="4" name="Analisi" color="#000000" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true">
-            <task id="52" name="Analisi requisiti" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
-            <task id="74" name="Analisi dei costi" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
-            <task id="77" name="Analisi di dominio" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
-            <task id="105" name="Analisi dei mezzi" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
-            <task id="115" name="Consegna analisi" color="#8cb6ce" meeting="true" start="2018-03-16" duration="0" complete="0" expand="true"/>
+        <task id="4" name="Analisi" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true">
+            <task id="52" name="Analisi requisiti" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
+            <task id="74" name="Analisi dei costi" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
+            <task id="77" name="Analisi di dominio" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
+            <task id="105" name="Analisi dei mezzi" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
+            <task id="115" name="Consegna analisi" color="#000000" meeting="true" start="2018-03-16" duration="0" complete="0" expand="true"/>
         </task>
-        <task id="2" name="Progettazione" color="#000000" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
-            <task id="87" name="Gantt preventivo" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
-            <task id="471" name="Gantt consultivo" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true"/>
+        <task id="2" name="Progettazione" color="#ff3333" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
+            <task id="87" name="Gantt preventivo" color="#ff3333" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
+            <task id="471" name="Gantt consuntivo" color="#ff3333" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true"/>
         </task>
-        <task id="3" name="Implementazione" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
-            <task id="101" name="Implementazione pdf" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
-            <task id="121" name="Implementazione codice a barre" meeting="false" start="2018-04-13" duration="8" complete="0" expand="true"/>
-            <task id="123" name="Implementazione lego" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
-            <task id="119" name="Implementazione video" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
-            <task id="124" name="Lettura codice a barre" color="#8cb6ce" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
+        <task id="3" name="Implementazione" color="#33cc00" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
+            <task id="101" name="Implementazione pdf" color="#33cc00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
+            <task id="121" name="Implementazione codice a barre" color="#33cc00" meeting="false" start="2018-04-13" duration="8" complete="0" expand="true"/>
+            <task id="123" name="Implementazione lego" color="#33cc00" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
+            <task id="119" name="Implementazione video" color="#33cc00" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
+            <task id="124" name="Lettura codice a barre" color="#33cc00" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
         </task>
-        <task id="5" name="Test del programma" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
-            <task id="569" name="Test implementazione pdf" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
-            <task id="571" name="Test implementazione codice a barre" meeting="false" start="2018-04-13" duration="8" complete="0" expand="true"/>
-            <task id="573" name="Test implementazione lego" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
-            <task id="575" name="Test implementazione video" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
+        <task id="5" name="Test del programma" color="#ffff00" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
+            <task id="569" name="Test implementazione pdf" color="#ffff00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
+            <task id="571" name="Test implementazione codice a barre" color="#ffff00" meeting="false" start="2018-04-13" duration="8" complete="0" expand="true"/>
+            <task id="573" name="Test implementazione lego" color="#ffff00" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
+            <task id="575" name="Test implementazione video" color="#ffff00" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
             <task id="577" name="Test lettura codice a barre" color="#8cb6ce" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
         </task>
-        <task id="6" name="Documentazione" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
-            <task id="92" name="Documentazione" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
-            <task id="93" name="Diario" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
+        <task id="6" name="Documentazione" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
+            <task id="92" name="Documentazione" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
+            <task id="93" name="Diario" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
         </task>
-        <task id="0" name="Fine progetto" color="#8cb6ce" meeting="true" start="2018-05-18" duration="0" complete="0" expand="true"/>
+        <task id="0" name="Fine progetto" color="#000000" meeting="true" start="2018-05-18" duration="0" complete="0" expand="true"/>
     </tasks>
-    <resources/>
+    <resources>
+        <resource id="0" name="Luca Rausa" function="Default:0" contacts="" phone=""/>
+        <resource id="1" name="Elia Manassero" function="Default:0" contacts="" phone=""/>
+    </resources>
     <allocations/>
     <vacations/>
     <previous/>
