@@ -5,7 +5,7 @@
         <field id="tpd4" name="Data d'inizio" width="79" order="1"/>
         <field id="tpd5" name="Data di fine" width="60" order="2"/>
         <field id="tpd13" name="Risorse" width="162" order="3"/>
-        <option id="color.recent"><![CDATA[#ffff00 #000000 #00ffcc #33cc00 #00cc00 #99ff00 #ff3333 #3333ff #ccffcc #f4f4f4]]></option>
+        <option id="color.recent"><![CDATA[#33cc00 #ffff00 #000000 #00ffcc #00cc00 #99ff00 #ff3333 #3333ff #ccffcc #f4f4f4]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nome" width="210" order="0"/>
@@ -54,7 +54,8 @@
         </task>
         <task id="3" name="Implementazione" color="#33cc00" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
             <task id="101" name="Implementazione pdf" color="#33cc00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
-            <task id="121" name="Implementazione codice a barre" color="#33cc00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
+            <task id="121" name="Implementazione codice a barre &amp; QR" color="#33cc00" meeting="false" start="2018-03-23" duration="27" complete="0" expand="true"/>
+            <task id="579" name="Visualizzazione semplice per categoria" color="#33cc00" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
             <task id="123" name="Implementazione lego" color="#33cc00" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
             <task id="119" name="Implementazione video" color="#33cc00" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
             <task id="124" name="Lettura codice a barre" color="#33cc00" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
