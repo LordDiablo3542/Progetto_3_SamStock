@@ -189,7 +189,36 @@ $idI = $_GET['id'];
                                     echo "<td style='vertical-align: middle;'><img src='./img/NO.png' whidth='20px' height='20px'></td>";
                                 }
                                 ?>
-                        </tr>     
+                        </tr>
+						<tr>
+                                                        <td class="sizedTD">Codice a barre </td>
+                                                        <td>
+                                                            <?php 
+                                                            include 'barcodeReader/barcode.php';
+                                                            
+                                                            //Creazione dell'oggetto barcode_generator
+                                                            $barcodeGenerator = new barcode_generator();
+                                                            $symbolUPC = 'upc-a';
+                                                            $symbolQR = 'qr';
+                                                            $data = $row['Numero di serie'];
+                                                            
+                                                            //Creazione delle immagini dei relativi codice a barre e QrCode
+                                                            $imageUPC = $barcodeGenerator->render_image($symbolUPC, $data, '');
+                                                            $imageQR = $barcodeGenerator->render_image($symbolQR, $data, '');
+                                                            
+                                                            //Salvataggio delle immagini
+                                                            $imagePathUPC = 'img/barcodeGeneratedUPC.png';
+                                                            $imagePathQR = 'img/barcodeGeneratedQR.png';
+                                                            imagepng($imageUPC, $imagePathUPC);
+                                                            imagepng($imageQR, $imagePathQR);
+                                                            imagedestroy($imageUPC);
+                                                            imagedestroy($imageQR);
+                                                            ?>
+                                                            <!-- Visualizzazione delle immagini tramite HTML -->
+                                                            <img src="<?php echo $imagePathUPC; ?>" width="200" height="150" />
+                                                            <img src="<?php echo $imagePathQR; ?>" width="200" height="200" />
+                                                        </td>
+                                                </tr>						
                     </table>
                 </div>
                 <div role="tabpanel" class="tab-pane tabDiv" id="contatta">
