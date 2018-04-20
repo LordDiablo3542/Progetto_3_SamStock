@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-02-26" view-index="0" gantt-divider-location="584" resource-divider-location="300" version="2.8.5" locale="it">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="302" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="135" order="1"/>
-        <field id="tpd5" name="Data di fine" width="128" order="2"/>
-        <option id="taskLabelUp" value="length"/>
+        <field id="tpd3" name="Nome" width="279" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="79" order="1"/>
+        <field id="tpd5" name="Data di fine" width="60" order="2"/>
+        <field id="tpd13" name="Risorse" width="162" order="3"/>
         <option id="color.recent"><![CDATA[#ffff00 #000000 #00ffcc #33cc00 #00cc00 #99ff00 #ff3333 #3333ff #ccffcc #f4f4f4]]></option>
     </view>
     <view id="resource-table">
@@ -48,6 +48,10 @@
             <task id="87" name="Gantt preventivo" color="#ff3333" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="471" name="Gantt consuntivo" color="#ff3333" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true"/>
         </task>
+        <task id="6" name="Documentazione" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
+            <task id="92" name="Documentazione" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
+            <task id="93" name="Diario" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
+        </task>
         <task id="3" name="Implementazione" color="#33cc00" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
             <task id="101" name="Implementazione pdf" color="#33cc00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
             <task id="121" name="Implementazione codice a barre" color="#33cc00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
@@ -60,11 +64,7 @@
             <task id="571" name="Test implementazione codice a barre" color="#ffff00" meeting="false" start="2018-04-13" duration="8" complete="0" expand="true"/>
             <task id="573" name="Test implementazione lego" color="#ffff00" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
             <task id="575" name="Test implementazione video" color="#ffff00" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
-            <task id="577" name="Test lettura codice a barre" color="#8cb6ce" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
-        </task>
-        <task id="6" name="Documentazione" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
-            <task id="92" name="Documentazione" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
-            <task id="93" name="Diario" color="#00ffcc" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true"/>
+            <task id="577" name="Test lettura codice a barre" color="#ffff00" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
         </task>
         <task id="0" name="Fine progetto" color="#000000" meeting="true" start="2018-05-18" duration="0" complete="0" expand="true"/>
     </tasks>
@@ -72,7 +72,26 @@
         <resource id="0" name="Luca Rausa" function="Default:0" contacts="" phone=""/>
         <resource id="1" name="Elia Manassero" function="Default:0" contacts="" phone=""/>
     </resources>
-    <allocations/>
+    <allocations>
+        <allocation task-id="121" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="577" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="115" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="471" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="87" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="52" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="77" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="105" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="92" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="93" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="101" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="115" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="87" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="471" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="74" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="105" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="92" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="93" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+    </allocations>
     <vacations/>
     <previous/>
     <roles roleset-name="Default"/>
