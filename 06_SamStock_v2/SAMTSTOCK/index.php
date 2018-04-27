@@ -30,7 +30,7 @@ if (isset($_SESSION['username'])) {
     </head>
     <body>
         <!-- menu -->
-<?php include 'menu.php'; ?>
+        <?php include 'menu.php'; ?>
 
         <!-- contenuto pagina -->
         <div class="container">
@@ -42,7 +42,7 @@ if (isset($_SESSION['username'])) {
                     <?php
                     include 'mysqlcon.php';
 
-                    $result = mysqli_query($con, "SELECT * FROM categorie ORDER BY NomeC;"); //selezioni categorie e ordino per nome
+                    $result = mysqli_query($con, "SELECT * FROM categorie_padre ORDER BY NomeCP;"); //selezioni categorie e ordino per nome
                     //creo un select prendendo le opzioni dal database
                     echo "<div class='col-lg-4'>";
                     echo "<div class='input-group'>";
@@ -50,7 +50,11 @@ if (isset($_SESSION['username'])) {
 						<option value='' style='display:none;' disabled selected>Seleziona una categoria</option>";
 
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "<option value=$row[ID_Categoria]>$row[NomeC]</option>";
+                        echo "<option disabled>&HorizontalLine;&HorizontalLine; $row[NomeCP] &HorizontalLine;&HorizontalLine;</option>";
+                        $padre = mysqli_query($con, "SELECT * FROM Categorie WHERE Categoria_padre = " . $row['ID_categoria_padre'] . " ORDER BY NomeC;");
+                        while ($figli = mysqli_fetch_array($padre)) {
+                            echo "<option value= $figli[ID_Categoria] >$figli[NomeC]</option>";
+                        }
                     }
                     echo "</select>";
                     echo "<span class='input-group-btn'>
@@ -201,7 +205,7 @@ if (isset($_SESSION['username'])) {
                     echo '</tr>';
 
                     while ($row = mysqli_fetch_array($result)) {
-                        
+
                         //stampa dei nomi in rosso se non disponibile
                         if ($row['Disponibile'] == 1) {
                             //stampa dei nomi in verde se quantità maggiore 1

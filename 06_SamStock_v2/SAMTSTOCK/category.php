@@ -105,7 +105,7 @@
 
             include 'mysqlcon.php';
 
-            $result = mysqli_query($con, "SELECT * FROM Categorie_padre ORDER BY ID_categoria_padre DESC;"); //prendo tutti gli utenti
+            $result = mysqli_query($con, "SELECT * FROM Categorie_padre ORDER BY NomeCP;"); //prendo tutti gli utenti
 
             echo '<h1>Elimina categorie</h1>';
 
@@ -129,7 +129,7 @@
                         </a>
                     </td>";
                     echo "</tr>";
-                    $padre = mysqli_query($con, "SELECT * FROM Categorie WHERE Categoria_padre = ".$row['ID_categoria_padre']." ORDER BY ID_Categoria DESC;");
+                    $padre = mysqli_query($con, "SELECT * FROM Categorie WHERE Categoria_padre = ".$row['ID_categoria_padre']." ORDER BY NomeC;");
                     
                     while ($figli = mysqli_fetch_array($padre)) {
                         echo "<tr Style='background-color: #f9f9f9;'>";

@@ -62,6 +62,9 @@
             if ($_GET['usenameerr']) {
                 echo '<center><div id="successmsg" class="alert alert-warning">Il numero di serie da te scelto esiste già, le modifiche non sono potute essere fatte</div></center>';
             }
+            if ($_GET['updateerr']) {
+                echo '<center><div id="successmsg" class="alert alert-warning">Il prodotto non esiste o non é associato al codice usato</div></center>';
+            }
             ?>
             <?php
             include 'mysqlcon.php'; //connessione al database
