@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-02-26" view-index="0" gantt-divider-location="584" resource-divider-location="300" version="2.8.5" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-03-12" view-index="0" gantt-divider-location="561" resource-divider-location="300" version="2.8.5" locale="it">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="279" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="79" order="1"/>
-        <field id="tpd5" name="Data di fine" width="60" order="2"/>
-        <field id="tpd13" name="Risorse" width="162" order="3"/>
-        <option id="color.recent"><![CDATA[#33cc00 #ffff00 #000000 #00ffcc #00cc00 #99ff00 #ff3333 #3333ff #ccffcc #f4f4f4]]></option>
+        <field id="tpd3" name="Nome" width="267" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="76" order="1"/>
+        <field id="tpd5" name="Data di fine" width="58" order="2"/>
+        <field id="tpd13" name="Risorse" width="156" order="3"/>
+        <option id="color.recent"><![CDATA[#ff6600 #33cc00 #ffff00 #000000 #00ffcc #00cc00 #99ff00 #ff3333 #3333ff #ccffcc]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nome" width="210" order="0"/>
@@ -59,6 +59,10 @@
             <task id="123" name="Implementazione lego" color="#33cc00" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
             <task id="119" name="Implementazione video" color="#33cc00" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
             <task id="124" name="Lettura codice a barre" color="#33cc00" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
+        </task>
+        <task id="580" name="Integrazione" color="#ff6600" meeting="false" start="2018-04-20" duration="1" complete="0" expand="true">
+            <task id="581" name="Integrazione codice a barre - singolo prodotto" color="#ff6600" meeting="false" start="2018-04-20" duration="1" complete="0" expand="true"/>
+            <task id="586" name="Integrazione pdf" color="#ff6600" meeting="false" start="2018-04-20" duration="1" complete="0" expand="true"/>
         </task>
         <task id="5" name="Test del programma" color="#ffff00" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
             <task id="569" name="Test implementazione pdf" color="#ffff00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
