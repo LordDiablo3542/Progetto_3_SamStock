@@ -116,7 +116,6 @@
             } else {
                 echo '<th class="sizedTD"><input type="checkbox" id="selecctall"></th>';
             }
-//            echo '<th>ID</th>';
             echo '<th>Nome</th>';
             echo '<th>Categoria</th>';
             echo '<th>Modello</th>';
@@ -318,7 +317,7 @@
             });
 
             function deleterFunction(id) {
-                if (confirm("Sei sicuro di voler cancellare il prodotto con l'id " + id + "?") == true) { //chiede se sei sicuro
+                if (confirm("Sei sicuro di voler cancellare questo prodotto?") == true) { //chiede se sei sicuro
                     window.location.href = "deleterP.php?delete=" + id; //fa il redirect
                 }
             }

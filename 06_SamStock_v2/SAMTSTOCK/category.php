@@ -52,12 +52,45 @@
             ?>
             <!--Form di inserimento-->
             <form method="post" role="form">
-                <div class="col-lg-12">
-                    <div class="input-group" style="margin-bottom: 10px;">
-                        <input type="text" class="form-control input-lg" placeholder="Nome categoria" name="categoryName" required autofocus>
-                        <span class="input-group-btn">
-                            <button class="btn btn-success input-lg" type="submit"><span class="glyphicon glyphicon-plus"></span> Aggiungi</button>
-                        </span>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6">
+                        <div style="margin-bottom: 10px;">
+                            <input type="text" class="form-control input-lg" placeholder="Nome categoria" name="categoryName" required autofocus>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <div class="form-group" style="margin-bottom: 10px;">
+                                <?php
+                                include 'mysqlcon.php'; //connessione al db
+
+                                $result = mysqli_query($con, "SELECT * FROM categorie_padre ORDER BY NomeCP;"); //query per select
+                                ?>
+                                <select onchange="this.nextElementSibling.value = this.options[this.selectedIndex].text;" class="input-lg form-control"
+                                        placeholder="Nome categoria padres" name="categoryPadreName" required autofocus>
+                                <?php
+                                    echo "<option value='' style='display:none;' disabled selected>Categoria padre</option>";
+                                    while ($row = mysqli_fetch_array($result)) {
+                                        echo "<option value=$row[ID_categoria_padre]>$row[NomeCP]</option>"; //stampo opzione della selezione
+                                    }
+                                    echo "</select>";                                    
+                                ?>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                        <div style="margin-bottom: 10px;">
+                            <button class="btn btn-success input-lg" type="submit" style="width: 100%">
+                                <span class="glyphicon glyphicon-plus"></span> 
+                                Aggiungi
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="form-group">
+                            <input type="checkbox" name="isPadre" onchange="changePadre()" value="1"> Padre<br/>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -72,38 +105,47 @@
 
             include 'mysqlcon.php';
 
-            $result = mysqli_query($con, "SELECT * FROM categorie ORDER BY ID_Categoria DESC;"); //prendo tutti gli utenti
+            $result = mysqli_query($con, "SELECT * FROM Categorie_padre ORDER BY ID_categoria_padre DESC;"); //prendo tutti gli utenti
 
             echo '<h1>Elimina categorie</h1>';
 
-            printTable($result);
-
-            mysqli_close($con);
+            printTable($result, $con);
 
             //stampo tabella
-            function printTable($result) {
+            function printTable($result, $con) {
                 echo '<table class="table table-bordered table-striped table-hover">';
                 echo '<tr class="info">';
-//                echo '<th class="sizedTD">ID</th>';
                 echo '<th>Nome</th>';
                 echo '<th class="sizedTD">Azioni</th>';
                 echo '</tr>';
-
+                
                 while ($row = mysqli_fetch_array($result)) {
-                    if ($row['ID_Categoria'] != 0 && $row['ID_Categoria'] != 1) {
-                        echo "<tr>";
-//                        echo "<td><center>" . $row['ID_Categoria'] . "</center></td>";
-                        echo "<td>" . $row['NomeC'] . "</td>";
+                    
+                    echo "<tr Style='background-color: white;'>";
+                    echo "<td>" . $row['NomeCP'] . "</td>";
+                    echo "<td class='sizedTD'>
+                        <a class='actionLinks' title='Cancella' onclick='deleterPFunction(" . $row['ID_categoria_padre'] . ")'> 
+                            <i class='glyphicon glyphicon-remove' style='font-size: 22px;'></i>
+                        </a>
+                    </td>";
+                    echo "</tr>";
+                    $padre = mysqli_query($con, "SELECT * FROM Categorie WHERE Categoria_padre = ".$row['ID_categoria_padre']." ORDER BY ID_Categoria DESC;");
+                    
+                    while ($figli = mysqli_fetch_array($padre)) {
+                        echo "<tr Style='background-color: #f9f9f9;'>";
+                        echo "<td Style='padding-left: 30px'>" . $figli['NomeC'] . "</td>";
                         echo "<td class='sizedTD'>
-										<a class='actionLinks' title='Cancella' onclick='deleterFunction(" . $row['ID_Categoria'] . ")'> 
-											<i class='glyphicon glyphicon-remove' style='font-size: 22px;'></i>
-										</a>
-									</td>";
+                            <a class='actionLinks' title='Cancella' onclick='deleterFunction(" . $figli['ID_Categoria'] . ")'> 
+                                <i class='glyphicon glyphicon-remove' style='font-size: 22px;'></i>
+                            </a>
+                        </td>";
                         echo "</tr>";
                     }
+                    
                 }
                 echo "</table>";
             }
+            mysqli_close($con);
             ?>
         </div>
 
@@ -111,11 +153,24 @@
         include 'mysqlcon.php'; //connessione database
 
         $categoryName = mysqli_real_escape_string($con, $_POST['categoryName']); //prendo dati
-//controllo che non siano vuoti
+        
+        $ispadre = $_POST['isPadre'];
+        if (empty($ispadre)) {
+            $isadre = 0;
+        }
+        //controllo che non siano vuoti
         if (!empty($categoryName)) {
             // inserimento della categoria
-            if (!mysqli_query($con, "INSERT INTO categorie(NomeC) VALUES ('$categoryName')")) { //query INSERT
-                die(header("location: category.php?nameerr=true")); //errore
+            if($ispadre == 0){
+                $categoryPadreName = $_POST['categoryPadreName'];
+                if (!mysqli_query($con, "INSERT INTO categorie(NomeC,Categoria_padre) VALUES ('$categoryName',".$categoryPadreName.")")) { //query INSERT
+                    die(header("location: category.php?nameerr=true")); //errore
+                }
+            }
+            else{
+                if (!mysqli_query($con, "INSERT INTO categorie_padre(NomeCP) VALUES ('$categoryName')")) { //query INSERT
+                    die(header("location: category.php?nameerr=true")); //errore
+                }
             }
             mysqli_close($con); //chiudo connessione
             header("location: category.php?added=true"); //redirect
@@ -125,6 +180,18 @@
             $id = $_GET['delete']; //prendo dato
             // Cancellazione della categoria
             if (!mysqli_query($con, "DELETE FROM categorie WHERE ID_Categoria='$id'")) { //cancello
+                die(header("location: category.php?catdelerr=true")); //errore
+            }
+            mysqli_close($con);
+
+            header("location: category.php?deleted=true"); //redirect
+        }
+        
+        if (isset($_GET['deleteP'])) {
+            $id = $_GET['deleteP']; //prendo dato
+            // Cancellazione della categoria
+            if (!mysqli_query($con, "DELETE FROM Categorie_padre WHERE ID_categoria_padre='$id'")
+                    || !mysqli_query($con, "DELETE FROM categorie WHERE Categoria_padre='$id'")) { //cancello
                 die(header("location: category.php?catdelerr=true")); //errore
             }
             mysqli_close($con);
@@ -143,6 +210,24 @@
             function deleterFunction(id) {
                 if (confirm("Sei sicuro di voler cancellare questa categoria?") == true) { //chiede se sei sicuro
                     window.location.href = "category.php?delete=" + id; //fa il redirect
+                }
+            }
+            
+            function deleterPFunction(id) {
+                if (confirm("Sei sicuro di voler cancellare questa categoria e le sue categorie derivanti?") == true) { //chiede se sei sicuro
+                    window.location.href = "category.php?deleteP=" + id; //fa il redirect
+                }
+            }
+            
+            function changePadre(){
+                var c = document.getElementsByName("isPadre")[0];
+                var s = document.getElementsByName("categoryPadreName")[0];
+                
+                if(c.checked == true){
+                    s.disabled = true;
+                }
+                else{
+                    s.disabled = false;
                 }
             }
         </script>

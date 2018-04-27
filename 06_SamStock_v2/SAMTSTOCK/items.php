@@ -64,15 +64,25 @@
                             <?php
                             include 'mysqlcon.php'; //connessione al db
 
-                            $result = mysqli_query($con, "SELECT * FROM categorie ORDER BY NomeC;"); //query per select
+                            //$result = mysqli_query($con, "SELECT * FROM categorie ORDER BY NomeC;"); //query per select
+                            $result = mysqli_query($con, "SELECT * FROM categorie_padre ORDER BY NomeCP;");
                             ?>
                             <select onchange="this.nextElementSibling.value = this.options[this.selectedIndex].text;" class="input-lg form-control">
                                 <?php
                                 echo "<option value='' style='display:none;' disabled selected>Seleziona una categoria</option>";
 
+                                // while ($row = mysqli_fetch_array($result)) {
+                                //     echo "<option value=$row[ID_Categoria]>$row[NomeC]</option>"; //stampo opzione della selezione
+                                // }
+
                                 while ($row = mysqli_fetch_array($result)) {
-                                    echo "<option value=$row[ID_Categoria]>$row[NomeC]</option>"; //stampo opzione della selezione
+                                   echo "<option disabled>&HorizontalLine;&HorizontalLine; $row[NomeCP] &HorizontalLine;&HorizontalLine;</option>";
+                                   $padre = mysqli_query($con, "SELECT * FROM Categorie WHERE Categoria_padre = ".$row['ID_categoria_padre']." ORDER BY NomeC;");
+                                   while ($figli = mysqli_fetch_array($padre)) {
+                                       echo "<option value= $figli[ID_Categoria] >$figli[NomeC]</option>";
+                                    }
                                 }
+
                                 echo "</select>";
                                 ?>
                                 <input name="category" type="text" class="form-control input-lg" value="" required>
