@@ -64,7 +64,7 @@
                         echo  $nameI; 
                         if($power >= 1){
                             ?> 
-				<a href="labels.php?<?php echo "name=".$nameI."&id=".$idI; ?>" target="_blank" style="font-size: 22px;" title="Stampa etichetta"> <i class="glyphicon glyphicon-print"></i></a>
+				<a href="labels.php?<?php echo 'prod='.$nameI.'&code=img/QR'.$idI.'.png'; ?>" target="_blank" style="font-size: 22px;" title="Stampa etichetta"> <i class="glyphicon glyphicon-print"></i></a>
 			<?php } ?></h1>
 			
 			<?php
@@ -210,8 +210,8 @@
                                                             $imageQR = $barcodeGenerator->render_image($symbolQR, $data, '');
                                                             
                                                             //Salvataggio delle immagini
-                                                            $imagePathUPC = 'img/barcodeGeneratedUPC.png';
-                                                            $imagePathQR = 'img/barcodeGeneratedQR.png';
+                                                            $imagePathUPC = 'img/UPC'.$row['ID_Prodotto'].'.png';
+                                                            $imagePathQR = 'img/QR'.$row['ID_Prodotto'].'.png';
                                                             imagepng($imageUPC, $imagePathUPC);
                                                             imagepng($imageQR, $imagePathQR);
                                                             imagedestroy($imageUPC);

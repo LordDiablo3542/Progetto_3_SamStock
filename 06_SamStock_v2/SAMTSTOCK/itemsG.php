@@ -190,14 +190,18 @@
                                             <div class="form-group select-editable">
                                                 <?php
                                                 include 'mysqlcon.php';
-                                                $resultIN = mysqli_query($con, "SELECT * FROM categorie ORDER BY NomeC;"); //query per select
+                                                $resultIN = mysqli_query($con, "SELECT * FROM categorie_padre ORDER BY NomeCP;"); //query per select
                                                 ?>
                                                 <select class="input-lg form-control" name="categoriaProdotto" required >
                                                     <?php
                                                     echo "<option value='' style='display:none;' disabled selected>Seleziona una categoria</option>";
 
                                                     while ($rowIN = mysqli_fetch_array($resultIN)) {
-                                                        echo "<option value=$rowIN[ID_Categoria]>$rowIN[NomeC]</option>"; //stampo opzione della selezione
+                                                        echo "<option disabled>&HorizontalLine;&HorizontalLine; $rowIN[NomeCP] &HorizontalLine;&HorizontalLine;</option>"; //stampo opzione della selezione
+                                                        $padre = mysqli_query($con, "SELECT * FROM Categorie WHERE Categoria_padre = " . $rowIN['ID_categoria_padre'] . " ORDER BY NomeC;");
+                                                        while ($figli = mysqli_fetch_array($padre)) {
+                                                            echo "<option value= $figli[ID_Categoria] >$figli[NomeC]</option>";
+                                                        }
                                                     }
                                                     mysqli_close($con);
                                                     ?>
@@ -241,8 +245,8 @@
                                         </div>
                                         <div class="col-xs-4 col-sm-4 col-md-4">
                                             <div class="form-group">
-                                                <input type="checkbox" name="disponibile" value="1" <?php echo ($row['Disponibile'] == 1 ? "checked" : "") ?>> &Egrave; diposnibile?<br/>
-                                                <input type="checkbox" name="portabile" value="1" <?php echo ($row['Portabile'] == 1 ? "checked" : "") ?>> &Egrave; portabile a casa?
+                                                <input type="checkbox" name="disponibile" value="1" <?php echo ($row['Disponibile'] == 1 ? "checked" : "") ?>> Diposnibile<br/>
+                                                <input type="checkbox" name="portabile" value="1" <?php echo ($row['Portabile'] == 1 ? "checked" : "") ?>> Portabile a casa
                                             </div>
                                         </div>
                                     </div>
