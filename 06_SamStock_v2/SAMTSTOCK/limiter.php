@@ -38,7 +38,7 @@
 			<form action="limiter.php" method="post" role="form" class="input-group searchForm">
 				<div class="col-lg-12">
 					<div class="input-group">
-						<input type="text" class="form-control input-lg searchInput" placeholder="Cerca il prodotto, tramite il suo nome" name="item">
+						<input style="width: 220px;" type="text" class="form-control input-lg searchInput" placeholder="Cerca il prodotto" name="item">
 						<span class="input-group-btn">
 							<button class="btn btn-default input-lg searchInput" type="submit">CERCA</button>
 						</span>
