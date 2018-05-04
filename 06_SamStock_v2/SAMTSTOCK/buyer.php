@@ -1,8 +1,4 @@
 <?php
-	/*
-	 * Codice per la riservazione da parte di un utente.
-	 */
-
 	session_start(); //inizio della sessione
 	
 	$username = $_SESSION['username']; //prendo il nome utente

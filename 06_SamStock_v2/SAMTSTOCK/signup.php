@@ -1,8 +1,4 @@
 <?php
-	/*
-	 *	Codice php per la creazione di un nuovo utente
-	 */
-
 	include 'mysqlcon.php';
 	
 	//regex per il controllo dei dati inserirti

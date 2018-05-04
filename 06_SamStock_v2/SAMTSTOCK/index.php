@@ -11,11 +11,9 @@ if (isset($_SESSION['username'])) {
 <html lang="it">
     <head>
         <meta charset="utf-8">
-        <title>Benvenuto  <?php
-            if ($logged) {
-                echo $name;
-            }
-            ?></title>
+        <title>Welcome!  <?php if ($logged) {
+    echo $name . "!";
+} ?></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Magazino SAMT">
@@ -30,7 +28,7 @@ if (isset($_SESSION['username'])) {
     </head>
     <body>
         <!-- menu -->
-        <?php include 'menu.php'; ?>
+<?php include 'menu.php'; ?>
 
         <!-- contenuto pagina -->
         <div class="container">
@@ -46,8 +44,9 @@ if (isset($_SESSION['username'])) {
                     //creo un select prendendo le opzioni dal database
                     echo "<div class='col-lg-4'>";
                     echo "<div class='input-group'>";
-                    echo "<select name='category' class='input-lg form-control categoryForm'>
-						<option value='' style='display:none;' disabled selected>Seleziona una categoria</option>";
+//----------------------------------------------MODIFICA: Aggiunta dello style per allargare il select
+                    echo "<select name='category' class='input-lg form-control categoryForm' style='width: 215px;'>
+						<option value='' style='display:none;' disabled selected>Seleziona categoria</option>";
 
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<option disabled>&HorizontalLine;&HorizontalLine; $row[NomeCP] &HorizontalLine;&HorizontalLine;</option>";
@@ -101,7 +100,9 @@ if (isset($_SESSION['username'])) {
                 $trovati = mysqli_num_rows($result); //conto le righe trovate
 
                 if ($trovati > 0) {//controllo che le righe trovate siano almeno 1
-                    echo "<h4 class='back-link'>Trovate $trovati voci per la categoria <b>" . stripslashes($cName['NomeC']) . "</b></h4>\n"; //stampo quante righe ho trovato
+                    echo "<h4 class='back-link'>Trovate $trovati voci per la categoria <b>" . stripslashes($cName['NomeC']) . "</b>\n"; //stampo quante righe ho trovato
+//----------------------------------------------MODIFICA: Aggiunta dell'icona che porta alla visualizzazione semplice
+                    echo "<a target='_blank' href='simpleViewCategoria.php?categoria=" . stripslashes($cName['NomeC']) . "'><img src='img/Items/view.ico' width='40' height='40'/></a></h4>";
                     printTable($result);
                 } else {
                     echo "<h4 class='back-link'>Al momento non ci sono articoli che contengano i termini cercati.</h4>"; //in caso siano state 0 righe trovate stampo un messaggio
@@ -179,7 +180,7 @@ if (isset($_SESSION['username'])) {
                 </center>
 
                 <div class="page-header">
-                    <h1>Ultimi prodotti inseriti</h1>
+                    <h1>Ultimi inseriti!</h1>
                 </div>
                 <?php
                 include 'mysqlcon.php';
@@ -201,11 +202,9 @@ if (isset($_SESSION['username'])) {
                     echo '<th style="width: 100px;">Disponibili</th>';
                     echo '<th style="width: 150px;">Prezzo</th>';
                     echo '<th style="width: 100px;">Pezzi</th>';
-                    echo '<th>PDF</th>';
                     echo '</tr>';
 
                     while ($row = mysqli_fetch_array($result)) {
-
                         //stampa dei nomi in rosso se non disponibile
                         if ($row['Disponibile'] == 1) {
                             //stampa dei nomi in verde se quantità maggiore 1
@@ -237,15 +236,6 @@ if (isset($_SESSION['username'])) {
                             echo "<td style='vertical-align: middle;text-align:right;width: 150px;'>CHF " . $row['Prezzo'] . ".-</td>";
                         }
                         echo "<td style='vertical-align: middle;text-align:center'>" . $row['Quantita'] . "</td>";
-                        if ($row['File_PDF'] != "NULL") {
-                            echo "<td style='vertical-align: middle;'>
-								<a href= " . $row['File_PDF'] . ">
-									<img src='./img/pdf.png' whidth='22px' height='22px'>
-								</a>
-							</td>";
-                        } else {
-                            echo "<td style='vertical-align: middle;'><img src='./img/NO.png' whidth='20px' height='20px'></td>";
-                        }
                         echo "</tr>";
                     }
                     echo "</table>";

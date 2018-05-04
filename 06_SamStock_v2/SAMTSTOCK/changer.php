@@ -1,8 +1,4 @@
 <?php
-	/*
-	 * Codice per cambiare la password
-	 */
-
 	session_start(); //inizio della sessione
 	
 	//include della connessione al database

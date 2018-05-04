@@ -1,4 +1,3 @@
-<!--Pagina delle riservazioni-->
 <html lang="it">
 	<head>
 		<meta charset="utf-8">

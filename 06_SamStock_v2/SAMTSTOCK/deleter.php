@@ -1,8 +1,4 @@
 <?php
-	/*
-	 * Codice per la cancellazione degli utentis
-	 */
-
 	session_start();
 	
 	include 'mysqlcon.php';
@@ -10,7 +6,6 @@
 	if (!empty($_GET['nodelete'])){
 		header("location: user.php");
 	}else{
-		//Cancellazione di un singolo utente
 		if (isset($_GET['delete'])){
 			$id = $_GET['delete']; //prendo dato
 
@@ -20,7 +15,6 @@
 			header("location: user.php?deleted=true"); //redirect
 		}
 		
-		//Cancellazione degli utenti selezoinati
 		if (isset($_POST['cbArray'])){
 			
 			$cbArray = $_POST['cbArray']; //prendo array

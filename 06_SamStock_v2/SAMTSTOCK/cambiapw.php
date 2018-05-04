@@ -1,4 +1,3 @@
-<!--Interfaccia per cambiare password-->
 <html lang="it">
 	<head>
 		<meta charset="utf-8">

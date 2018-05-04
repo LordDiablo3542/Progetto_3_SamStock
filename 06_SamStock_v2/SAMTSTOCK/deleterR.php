@@ -1,6 +1,4 @@
 <?php
-	// Codice per una cancellazione di un prodotto
-
 	session_start();
 	
 	include 'mysqlcon.php';

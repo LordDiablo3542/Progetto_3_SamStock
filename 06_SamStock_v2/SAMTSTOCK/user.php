@@ -1,9 +1,8 @@
-<!--Codice per la gestione degli utenti-->
 <html lang="it">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Gestione utenti Magazino SAMT">
+		<meta name="description" content="Aggiungi categorie Magazino SAMT">
 		<meta name="author" content="Angelo Sanker">
 
 		<title>Gestione Utenti</title>
@@ -25,21 +24,18 @@
 				echo '</div>';
 				die;
 			}
-			// Prende i dettagli dell'utente loggato.
 			$username = $_SESSION['username'];
 			$name = $_SESSION['name'];
 			$logged = $_SESSION['logged'];
 			$power = $_SESSION['power'];
 		?>
 		
-		<!--Stampa il menu-->
 		<?php include 'menu.php'; ?>
 		
 		<div class="container">
 			<div class="page-header">
 				<h1>Gestione Utenti!</h1>
 			</div>
-			<!--Form per la ricerca dell'utente-->
 			<form action="user.php" method="post" role="form" class="input-group searchForm">
 				<div class="col-lg-12">
 					<div class="input-group">
@@ -67,7 +63,6 @@
 			?>
 			<!--<form action="deleter.php" id="dForm" method="post">-->
 				<?php
-					// Ricerca dell'utente
 					include 'mysqlcon.php'; //connessione al database
 
 					//recupero dati dai form 
@@ -86,7 +81,6 @@
 						} else{
 							echo "<h4 class='back-link'>Al momento non ci sono utenti che contengano i termini cercati come nome.</h4>";//in caso siano state 0 righe trovate stampo un messaggio
 						}
-						// Impedisce la visualizazione di tutti gli utenti
 						echo '<style>';
 						echo '#allusers { display: none; }';
 						echo '</style>';
@@ -173,9 +167,8 @@
 							echo '<td class="sizedTD"><img src="img/NO.png" width="22px;" height="22px;" /></td>';
 						}
 					echo "</tr>";
-
 		?>
-					<!--Aria per la modifica dell'utente.-->
+					
 					<div class="modal fade" id="<?php echo 'Modal'. $row['ID_Utente']; ?>" tabindex="-1" role="dialog" aria-labelledby="<?php echo 'Modal'. $row['ID_Utente']; ?>" aria-hidden="true">
 						<div class="modal-dialog">
 							<div class="modal-content">
@@ -242,7 +235,6 @@
 			}
 		?>
 		
-		<!--Funzioni per le animazioni e per le animazioni.-->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script>

@@ -33,7 +33,7 @@
 		
 		<div class="container">
 			<div class="page-header">
-				<h1>Limiti prodotti</h1>
+				<h1>Limiti Prodotti!</h1>
 			</div>
 			<form action="limiter.php" method="post" role="form" class="input-group searchForm">
 				<div class="col-lg-12">
