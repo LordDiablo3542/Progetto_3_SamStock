@@ -133,7 +133,6 @@
             echo '</tr>';
 
             while ($row = mysqli_fetch_array($result)) {
-                echo '';
                 echo "<tr>";
                 if ($search) {
                     echo '<td class="sizedTD"><input class="checkbox2" type="checkbox" name="cbArray[]" value="' . $row['ID_Prodotto'] . '"></td>';
@@ -182,7 +181,7 @@
                                     <div class="row">
                                         <div class="col-xs-6 col-sm-6 col-md-6">
                                             <div class="form-group">
-                                                <input type="text" style="display: none;" name="ID" value="<?php echo $row['Nome']; ?>" required>
+                                                <input type="text" style="display: none;" name="ID" value="<?php echo $row['ID_Prodotto']; ?>" required>
                                                 <input type="text" class="form-control input-lg" placeholder="Nome prodotto" name="nomeProdotto" maxlength="50" value="<?php echo $row['NomeP']; ?>" required autofocus>
                                             </div>
                                         </div>
@@ -192,20 +191,23 @@
                                                 include 'mysqlcon.php';
                                                 $resultIN = mysqli_query($con, "SELECT * FROM categorie_padre ORDER BY NomeCP;"); //query per select
                                                 ?>
-                                                <select class="input-lg form-control" name="categoriaProdotto" required >
+                                                <select class="input-lg form-control" name="categoriaProdotto" required>
                                                     <?php
-                                                    echo "<option value='' style='display:none;' disabled selected>Seleziona una categoria</option>";
-
                                                     while ($rowIN = mysqli_fetch_array($resultIN)) {
-                                                        echo "<option disabled>&HorizontalLine;&HorizontalLine; $rowIN[NomeCP] &HorizontalLine;&HorizontalLine;</option>"; //stampo opzione della selezione
+                                                        echo "<option disabled>&HorizontalLine;&HorizontalLine; $rowIN[NomeCP] &HorizontalLine;&HorizontalLine;</option>";
                                                         $padre = mysqli_query($con, "SELECT * FROM Categorie WHERE Categoria_padre = " . $rowIN['ID_categoria_padre'] . " ORDER BY NomeC;");
+
                                                         while ($figli = mysqli_fetch_array($padre)) {
-                                                            echo "<option value= $figli[ID_Categoria] >$figli[NomeC]</option>";
+                                                            if ($figli[ID_Categoria] == $row[Categoria]) {
+                                                                echo "<option value=$figli[ID_Categoria] selected>$figli[NomeC]</option>"; //stampo opzione della selezione
+                                                            } else {
+                                                                echo "<option value=$figli[ID_Categoria]>$figli[NomeC]</option>"; //stampo opzione della selezione
+                                                            }
                                                         }
                                                     }
+                                                    echo "</select>";
                                                     mysqli_close($con);
                                                     ?>
-                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -245,8 +247,8 @@
                                         </div>
                                         <div class="col-xs-4 col-sm-4 col-md-4">
                                             <div class="form-group">
-                                                <input type="checkbox" name="disponibile" value="1" <?php echo ($row['Disponibile'] == 1 ? "checked" : "") ?>> Diposnibile<br/>
-                                                <input type="checkbox" name="portabile" value="1" <?php echo ($row['Portabile'] == 1 ? "checked" : "") ?>> Portabile a casa
+                                                <input type="checkbox" name="disponibile" value="1" <?php echo ($row['Disponibile'] == 1 ? "checked" : "") ?>> &Egrave; diposnibile?<br/>
+                                                <input type="checkbox" name="portabile" value="1" <?php echo ($row['Portabile'] == 1 ? "checked" : "") ?>> &Egrave; portabile a casa?
                                             </div>
                                         </div>
                                     </div>
