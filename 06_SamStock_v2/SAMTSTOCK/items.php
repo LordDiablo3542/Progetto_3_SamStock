@@ -144,8 +144,8 @@
                                     </div>
                                     <div class="col-xs-2 col-sm-2 col-md-2">
                                         <div class="form-group">
-                                            <input type="checkbox" name="disponibile" value="1"> &Egrave; diposnibile?<br/>
-                                            <input type="checkbox" name="portabile" value="1"> &Egrave; portabile a casa?
+                                            <input type="checkbox" name="disponibile" value="1"> Diposnibile<br/>
+                                            <input type="checkbox" name="portabile" value="1"> Portabile a casa
                                         </div>
                                     </div>
                                 </div>

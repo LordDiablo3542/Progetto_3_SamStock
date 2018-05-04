@@ -11,7 +11,7 @@ if (isset($_SESSION['username'])) {
 <html lang="it">
     <head>
         <meta charset="utf-8">
-        <title>Welcome!  <?php if ($logged) {
+        <title>Benvenuto  <?php if ($logged) {
     echo $name . "!";
 } ?></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -180,7 +180,7 @@ if (isset($_SESSION['username'])) {
                 </center>
 
                 <div class="page-header">
-                    <h1>Ultimi inseriti!</h1>
+                    <h1>Ultimi prodotti inseriti</h1>
                 </div>
                 <?php
                 include 'mysqlcon.php';

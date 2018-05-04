@@ -33,7 +33,7 @@
 		
 		<div class="container">
 			<div class="page-header">
-				<h1>Limiti Prodotti!</h1>
+				<h1>Limiti Prodotti</h1>
 			</div>
 			<form action="limiter.php" method="post" role="form" class="input-group searchForm">
 				<div class="col-lg-12">
@@ -149,7 +149,7 @@
 													<input type="text" style="display: none;" name="ID" value="<?php echo $row['ID_Prodotto']; ?>" required>
 													
 													<center>
-														<output style="font-size: 45px; for="limite" id="<?php echo 'pezzi'. $row['ID_Prodotto']; ?>"><?php echo $row['Limite']." pezzi"; ?></output>
+														<output style='font-size: 45px; for="limite" id="<?php echo 'pezzi'. $row['ID_Prodotto']; ?>"'><?php echo $row['Limite']." pezzi"; ?></output>
 													</center>
 													
 													<label for="limite" style="margin-left: 18px;">0</label>
