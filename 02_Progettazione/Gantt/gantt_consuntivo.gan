@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-03-12" view-index="0" gantt-divider-location="561" resource-divider-location="300" version="2.8.5" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-03-19" view-index="0" gantt-divider-location="601" resource-divider-location="300" version="2.8.5" locale="it">
     <description/>
     <view zooming-state="default:6" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="279" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="64" order="1"/>
-        <field id="tpd5" name="Data di fine" width="58" order="2"/>
-        <field id="tpd13" name="Risorse" width="156" order="3"/>
-        <option id="color.recent"><![CDATA[#ff6600 #33cc00 #ffff00 #000000 #00ffcc #00cc00 #99ff00 #ff3333 #3333ff #ccffcc]]></option>
+        <field id="tpd3" name="Nome" width="320" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="63" order="1"/>
+        <field id="tpd5" name="Data di fine" width="67" order="2"/>
+        <field id="tpd13" name="Risorse" width="147" order="3"/>
+        <option id="color.recent"><![CDATA[#ff6600 #33cc00 #ffff00 #00cc00 #3333ff #000000 #00ffcc #99ff00 #ff3333 #ccffcc]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nome" width="210" order="0"/>
@@ -38,11 +38,11 @@
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
         <task id="4" name="Analisi" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true">
-            <task id="115" name="Consegna analisi" color="#000000" meeting="true" start="2018-03-16" duration="0" complete="0" expand="true"/>
             <task id="52" name="Analisi requisiti" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="74" name="Analisi dei costi" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="77" name="Analisi di dominio" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
             <task id="105" name="Analisi dei mezzi" color="#3333ff" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
+            <task id="115" name="Consegna analisi" color="#3333ff" meeting="true" start="2018-03-16" duration="0" complete="0" expand="true"/>
         </task>
         <task id="2" name="Progettazione" color="#ff3333" meeting="false" start="2018-03-16" duration="62" complete="0" expand="true">
             <task id="87" name="Gantt preventivo" color="#ff3333" meeting="false" start="2018-03-16" duration="1" complete="0" expand="true"/>
@@ -55,21 +55,26 @@
         <task id="3" name="Implementazione" color="#33cc00" meeting="false" start="2018-03-23" duration="55" complete="0" expand="true">
             <task id="101" name="Implementazione pdf" color="#33cc00" meeting="false" start="2018-03-23" duration="20" complete="0" expand="true"/>
             <task id="121" name="Implementazione codice a barre &amp; QR" color="#33cc00" meeting="false" start="2018-03-23" duration="27" complete="0" expand="true"/>
-            <task id="123" name="Implementazione lego" color="#33cc00" meeting="false" start="2018-04-13" duration="15" complete="0" expand="true"/>
-            <task id="579" name="Visualizzazione semplice per categoria" color="#33cc00" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
-            <task id="119" name="Implementazione video" color="#33cc00" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
-            <task id="124" name="Lettura codice a barre" color="#33cc00" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
+            <task id="579" name="Visualizzazione semplice per categoria" color="#33cc00" meeting="false" start="2018-04-20" duration="22" complete="0" expand="true"/>
+            <task id="1009" name="Creazione PDF visualizzazione semplificata" color="#33cc00" meeting="false" start="2018-05-18" duration="1" complete="0" expand="true"/>
+            <task id="124" name="Lettura codice a barre" color="#33cc00" meeting="false" start="2018-04-20" duration="1" complete="0" priority="3" expand="true"/>
+            <task id="588" name="Categoria padre-figlio" color="#33cc00" meeting="false" start="2018-04-20" duration="15" complete="0" expand="true"/>
+            <task id="589" name="Stampa codice Qr" color="#00cc00" meeting="false" start="2018-05-04" duration="1" complete="0" expand="true"/>
         </task>
         <task id="5" name="Test del programma" color="#ffff00" meeting="false" start="2018-04-20" duration="29" complete="0" expand="true">
             <task id="569" name="Test implementazione pdf" color="#ffff00" meeting="false" start="2018-04-20" duration="1" complete="0" expand="true"/>
-            <task id="573" name="Test implementazione lego" color="#ffff00" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
             <task id="571" name="Test implementazione codice a barre &amp; QR" color="#ffff00" meeting="false" start="2018-04-20" duration="8" complete="0" expand="true"/>
-            <task id="575" name="Test implementazione video" color="#ffff00" meeting="false" start="2018-04-27" duration="15" complete="0" expand="true"/>
+            <task id="592" name="Test visualizzazione semplice per categoria" color="#ffff00" meeting="false" start="2018-05-11" duration="1" complete="0" expand="true"/>
             <task id="577" name="Test lettura codice a barre" color="#ffff00" meeting="false" start="2018-05-11" duration="8" complete="0" priority="3" expand="true"/>
+            <task id="595" name="Test categoria padre-figlio" color="#ffff00" meeting="false" start="2018-05-04" duration="1" complete="0" expand="true"/>
+            <task id="596" name="test stampa codice Qr" color="#ffff00" meeting="false" start="2018-05-04" duration="1" complete="0" expand="true"/>
         </task>
-        <task id="580" name="Integrazione" color="#ff6600" meeting="false" start="2018-04-20" duration="1" complete="0" expand="true">
+        <task id="580" name="Integrazione" color="#ff6600" meeting="false" start="2018-04-20" duration="29" complete="0" expand="true">
             <task id="581" name="Integrazione codice a barre - singolo prodotto" color="#ff6600" meeting="false" start="2018-04-20" duration="1" complete="0" expand="true"/>
             <task id="586" name="Integrazione pdf" color="#ff6600" meeting="false" start="2018-04-20" duration="1" complete="0" expand="true"/>
+            <task id="963" name="Integrazione visualizzazione semplificata" color="#ff6600" meeting="false" start="2018-05-11" duration="1" complete="0" expand="true"/>
+            <task id="1039" name="Integrazione creazione PDF visualizzazione semplificata" color="#ff6600" meeting="false" start="2018-05-18" duration="1" complete="0" expand="true"/>
+            <task id="1006" name="Integrazione stampa codice Qr" color="#ff6600" meeting="false" start="2018-05-04" duration="1" complete="0" expand="true"/>
         </task>
         <task id="0" name="Fine progetto" color="#000000" meeting="true" start="2018-05-18" duration="0" complete="0" expand="true"/>
     </tasks>
@@ -88,6 +93,13 @@
         <allocation task-id="105" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="92" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="93" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="579" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1009" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="571" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="592" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="581" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="963" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1039" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="101" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
         <allocation task-id="115" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="87" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
@@ -96,6 +108,14 @@
         <allocation task-id="105" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="92" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
         <allocation task-id="93" resource-id="1" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="589" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="124" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="588" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="569" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="595" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="596" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="586" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="1006" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
     </allocations>
     <vacations/>
     <previous/>

@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-03-19" view-index="0" gantt-divider-location="549" resource-divider-location="300" version="2.8.5" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2018-03-12" view-index="0" gantt-divider-location="414" resource-divider-location="300" version="2.8.5" locale="it">
     <description/>
-    <view zooming-state="default:5" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="245" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="70" order="1"/>
-        <field id="tpd5" name="Data di fine" width="84" order="2"/>
-        <field id="tpd13" name="Risorse" width="146" order="3"/>
+    <view zooming-state="default:6" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="276" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="59" order="1"/>
+        <field id="tpd5" name="Data di fine" width="60" order="2"/>
+        <field id="tpd13" name="Risorse" width="15" order="3"/>
         <option id="color.recent"><![CDATA[#000000 #00ffff #ffff00 #00cc00 #ff3333 #3333ff #99ff00 #ccffcc #f4f4f4]]></option>
     </view>
     <view id="resource-table">
