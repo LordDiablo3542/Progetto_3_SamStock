@@ -204,10 +204,11 @@
                                                             $symbolUPC = 'ean-13';
                                                             $symbolQR = 'qr';
                                                             $data = $row['Numero di serie'];
+                                                            $link = "localhost:3600/aggiungiprodotto.php?idprod=".$row["ID_Prodotto"];
                                                             
                                                             //Creazione delle immagini dei relativi codice a barre e QrCode
                                                             $imageUPC = $barcodeGenerator->render_image($symbolUPC, $data, '');
-                                                            $imageQR = $barcodeGenerator->render_image($symbolQR, $data, '');
+                                                            $imageQR = $barcodeGenerator->render_image($symbolQR, $link, '');
                                                             
                                                             //Salvataggio delle immagini
                                                             $imagePathUPC = 'img/UPC'.$row['ID_Prodotto'].'.png';
