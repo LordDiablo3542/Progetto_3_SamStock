@@ -9,7 +9,7 @@ $categoria = $_GET['categoria'];
         <link href="css/index.css" rel="stylesheet">
         <link rel="icon" type="image/png" href="img/favicon.png"> 
         <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <title>Prodotti di <?php echo $categoria; ?></title>
     </head>
@@ -122,7 +122,7 @@ $categoria = $_GET['categoria'];
 //        }
 //        echo "</table></div>";
         
-        echo "<form method='post' action='printSimpleViewCategoria.php/?categoria=".$categoria."'><h1><button id='printButton'><i class='glyphicon glyphicon-print'></i></button>Prodotti di ".$categoria."</h1></form>";
+        echo "<h1><button id='printButton' onclick='printPage()'><i class='glyphicon glyphicon-print'></i></button>Prodotti di ".$categoria."</h1>";
         
         while ($row1 = mysqli_fetch_array($id_cat))
         {
@@ -162,5 +162,13 @@ $categoria = $_GET['categoria'];
                 <p class="text-muted">Powered by Angelo Sanker Copyright &copy; 2014 & Luca Rausa - Elia Manassero &copy; 2018 SAMT.</p>
             </div>
         </div>
+        <script type="text/javascript">
+        function printPage()
+        {
+            document.getElementById("printButton").style.display = "none";
+            window.print();
+            document.getElementById("printButton").style.display = "block";
+        }
+    </script>
     </body>
 </html>
